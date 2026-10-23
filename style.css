@@ -1,0 +1,335 @@
+:root {
+  --primary-color: #0D2818;   
+  --accent-color: #D4AF37;    
+  --bg-color: #F8FAFC;        
+  --card-bg: #FFFFFF;         
+  --text-color: #1E293B;      
+  --danger-color: #DC2626;    
+  --success-color: #16A34A;   
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.header-title-box {
+  background-color: var(--primary-color);
+  padding: 30px 15px;
+  color: var(--accent-color); 
+  display: flex;
+ justify-content: center;
+ flex-direction: column;
+ align-items: center;
+ gap: 15px;
+ border-bottom: 5px solid var(--accent-color);
+ border-radius: 15px;
+}
+.soutitle{
+  font-size: medium;
+}
+.highlight {
+  color: white;
+}
+.catalogue{
+font-size: 20px;
+padding: 10px;
+border-bottom: 2px solid var(  --accent-color) ;
+border-radius: 15px;
+color: var(--primary-color);
+}
+
+.input{
+display: flex;
+flex-direction: column;
+
+margin: 10px; 
+gap: 10px;
+}
+.choisir-niveau{
+width: 125px;
+padding: 10px;
+border-radius: 15px;
+
+}
+.input-2{
+display: flex;
+flex-direction: column;
+margin: 10px; 
+gap: 10px;
+
+}
+.Toutes-matiéres{
+width: fit-content;
+padding: 10px;
+border-radius: 15px;
+
+}
+
+
+.selec-input{
+
+ display: flex;
+justify-content: space-between;
+
+ 
+}
+.cours{
+padding: 10px;
+font-size: 10px;
+}
+.cadre-1{
+padding: 10px;
+
+margin-left:10px;
+border-radius: 15px;
+font-size: xx-small;
+
+
+}
+.sec1{
+  margin: 20px;
+  border: 1px;
+  border-radius: 5px;
+ 
+}
+.mathématiques{
+  padding-left: 10px;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 5px;
+}
+.math{
+font-size: x-small;
+margin-left: 10px;
+
+}
+.prix{
+padding: 5px;
+color:var( --card-bg) ;
+background-color: var(--accent-color);
+
+border-radius: 10px;
+ 
+}
+.carte-1{
+border:2px solid var(--accent-color);
+width: 125px;
+padding: 10px;
+border-radius: 10px;
+
+}
+.btn{
+  padding: 5px;
+margin-left:20px ;
+margin-top: 10px;
+border:2px solid var(--accent-color);
+border-radius: 10px;
+}
+.box{
+border-bottom: 2px solid var(--accent-color);
+padding: 5px;
+border-radius: 15px;
+}
+.selection{
+font-size: 20px;
+padding: 10px;
+border-bottom: 2px solid var(  --accent-color) ;
+border-radius: 15px;
+color: var(--primary-color);
+}
+.empty-message{
+color:#718096;
+font-size: 16px;
+    font-style: italic;
+    margin: 12px 0
+
+}
+.prix-total{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 12px;
+    font-size: 20px;
+    color: #111
+
+}
+.Total{
+  font-size: 15px;
+}
+.ma-selection{
+border-bottom: 2px solid var(--accent-color);
+}
+.btnn{
+font-size: large;
+height: 50px;
+width: 80px;
+border-radius: 15px;
+border-color: var(--accent-color);
+}
+.dossier{
+font-size: 20px;
+padding: 10px;
+border-bottom: 2px solid var(  --accent-color) ;
+border-radius: 15px;
+color: var(--primary-color);
+
+}
+.inp1{
+display: flex;
+flex-direction: column;
+width: 200px;
+}
+.label{
+ font-size: small; 
+ margin: 5px;
+}
+.inpp{
+padding: 5px;
+border-radius: 15px;
+border: 1px solid ;
+}
+.inp2{
+  display: flex;
+flex-direction: column;
+width: 200px;
+}
+.label2{
+  font-size: small; 
+ margin: 5px; 
+}
+.inpp2{
+  padding: 5px;
+border-radius: 15px;
+border: 1px solid ;
+}
+.inp3{
+  display: flex;
+flex-direction: column;
+width: 200px;
+}
+.label3{
+  font-size: small; 
+ margin: 5px; 
+}
+.inpp3{
+  padding: 5px;
+border-radius: 15px;
+border: 1px solid ;
+}
+.inp4{
+  display: flex;
+flex-direction: column;
+width: 200px;
+}
+.label4{
+  font-size: small; 
+ margin: 5px; 
+}
+.inpp4{
+  padding: 5px;
+border-radius: 15px;
+border: 1px solid ;
+}
+.label5{
+   font-size: small; 
+ margin: 5px;  
+}
+.niveau-eleve{
+  padding: 5px;
+border-radius: 15px;
+border: 1px solid ;}
+.inp6{
+  display: flex;
+flex-direction: column;
+width: 200px;
+}
+.label6{
+  font-size: small; 
+ margin: 5px; 
+}
+.inpp6{
+  padding: 5px;
+border-radius: 15px;
+border: 1px solid ;
+}
+.inp7{
+  display: flex;
+flex-direction: column;
+width: 200px;
+}
+.label7{
+  font-size: small; 
+ margin: 5px; 
+}
+.inpp7{
+  padding: 5px;
+border-radius: 15px;
+border: 1px solid ;
+}
+
+
+.carte-1 {
+    width: 100%;
+    box-sizing: border-box;
+  display: grid;
+    grid-template-columns: repeat(3, 1fr);
+ 
+}
+.input-0{
+   padding: 5px;
+border-radius: 15px;
+border: 1px solid ;
+
+}
+.inppt-0{
+display: flex;
+flex-direction: column;
+width: 200px;
+margin-top:2px;
+} 
+.rechercheg{
+display: flex;
+flex-direction: column;
+width: 50%;
+margin: 10px; 
+gap: 10px;
+}
+.input-0{
+margin-bottom: 12px;
+font-size: 20px;
+}
+.footer{
+background-color:var( --primary-color) ;
+
+
+}
+.footer-content{
+color: var(--accent-color);
+border: 3px solid var(--accent-color);
+border-radius: 10px;
+}
+.Portail{
+  font-size: smaller;
+}
+.footer-contact{
+  font-size: smaller;
+}
+.footer-bottom{
+font-size: xx-small;
+margin-left: 1050px;
+
+}
+.contact{
+font-size: 20px;
+
+
+
+}
+.box{
+
+
+}
