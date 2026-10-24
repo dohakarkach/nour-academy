@@ -1,5 +1,5 @@
 let totalPrix = 0;
-
+let selectedCourses = [];
 const courses = [
     {
         id: 1,
@@ -161,40 +161,50 @@ function attacherEvenements() {
 }
 
 function showSelections(course) {
-    const selections = document.querySelector('.selection-content');
-    const emptyMessage = document.querySelector('.empty-message');
-    const totalStrong = document.querySelector('.prix-total strong');
-
-    if (emptyMessage) {
-        emptyMessage.remove();
+    if (selectedCourses.some(c => c.id === course.id)) {
+        return;
     }
 
-    if (selections) {
+    selectedCourses.push(course);
+    afficherSelection();
+}
+function afficherSelection() {
+    const selections = document.querySelector(".selection-content");
+
+    selections.innerHTML = "";
+    totalPrix = 0;
+
+    selectedCourses.forEach(course => {
+        totalPrix += course.price;
+
         selections.innerHTML += `
             <div class="cours-selectionne">
                 <h3>${course.name}</h3>
                 <p>Niveau : ${course.level}</p>
                 <p>Centre : ${course.center}</p>
                 <p>Prix : ${course.price} MAD/mois</p>
+
+                <button class="btnn"
+                    onclick="retirerCours(${course.id})">
+                    Retirer
+                </button>
             </div>
         `;
+    });
+
+    if (selectedCourses.length === 0) {
+        selections.innerHTML =
+            '<p class="empty-message">Aucun cours sélectionné.</p>';
     }
 
-    totalPrix += course.price;
-    if (totalStrong) {
-        totalStrong.textContent = totalPrix + "MAD";
-    }
+    document.querySelector(".prix-total strong").textContent =
+        totalPrix + " MAD";
 }
-const btnRetirer = document.querySelector(".btnn");
+function retirerCours(id) {
+    selectedCourses = selectedCourses.filter(function(course) {
+        return course.id !== id;
+    });
 
-btnRetirer.addEventListener("click", function() {
-    const selections = document.querySelector(".selection-content");
-
-    selections.innerHTML = `
-        <p class="empty-message">
-            Aucun cours sélectionné.
-        </p>
-    `;
-
-    document.querySelector(".prix-total strong").textContent = "0 MAD";
-});
+    afficherSelection();
+    show(niveau.value);
+}

@@ -72,6 +72,7 @@ border-radius: 15px;
 .selec-input{
 
  display: flex;
+ flex-wrap: wrap;
 justify-content: space-between;
 
  
@@ -107,18 +108,18 @@ margin-left: 10px;
 
 }
 .prix{
-padding: 5px;
+padding: 3px;
 color:var( --card-bg) ;
 background-color: var(--accent-color);
-
+width: 100px;
 border-radius: 10px;
  
 }
-.carte-1{
-border:2px solid var(--accent-color);
-width: 125px;
-padding: 10px;
-border-radius: 10px;
+.courses-grid{
+  width: 100%;
+    box-sizing: border-box;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
 
 }
 .btn{
@@ -163,12 +164,11 @@ font-size: 16px;
 .ma-selection{
 border-bottom: 2px solid var(--accent-color);
 }
+
 .btnn{
-font-size: large;
-height: 50px;
-width: 80px;
+padding: 10px;
+border: 2px solid var(--accent-color);
 border-radius: 15px;
-border-color: var(--accent-color);
 }
 .dossier{
 font-size: 20px;
@@ -329,7 +329,36 @@ font-size: 20px;
 
 
 }
-.box{
 
 
+/* PC : 3 cours */
+.courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 20px;
+}
+
+/* Style de chaque carte générée par JS */
+.carte-1 {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 15px;
+  background: white;
+}
+
+/* Tablette : 2 cours */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile : 1 cours */
+@media (max-width: 600px) {
+  .courses-grid {
+    grid-template-columns: 1fr;
+  }
 }
